@@ -16,7 +16,7 @@ use Psr\Container\ContainerInterface;
 
 class Product
 {
-    private const QUERY_PRODUCT_NAME_EXISTS = 'SELECT COUNT(product_name) FROM product WHERE product_name = :product_name LIMIT 1';
+    private const QUERY_PRODUCT_NAME_EXISTS = 'SELECT COUNT(product_name) FROM product WHERE product_name = :productName LIMIT 1';
 
     private const QUERY_BARCODE_EXISTS = 'SELECT COUNT(barcode_id) FROM product WHERE barcode_id = :barcode LIMIT 1';
 
@@ -41,7 +41,7 @@ class Product
     public function doesProductNameExist(string $productName): bool
     {
         $stmt = $this->db->prepare(self::QUERY_PRODUCT_NAME_EXISTS);
-        $stmt->bindValue('product_name', $productName, PDO::PARAM_STR);
+        $stmt->bindValue('productName', $productName, PDO::PARAM_STR);
         $stmt->execute();
 
         return $stmt->fetchColumn() == 1;
