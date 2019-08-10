@@ -19,9 +19,9 @@ Allows users to add new products and allows admins to moderate them easily.
 You can always contact me at *hi {{AT}} ph7 [[D0T]] me*!
 
 
-## Project URL
+## About The Project
 
-[Lifyzer.com](https://lifyzer.com)
+[Lifyzer.com](https://lifyzer.com), Healthy Food Solution™ 🥥
 
 
 ## Setting Up
